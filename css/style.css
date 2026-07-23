@@ -357,6 +357,21 @@ a.register-cta {
 a.register-cta:hover { background: #142063; transform: translateY(-1px); }
 a.register-cta .arr { color: var(--saffron); }
 
+/* disambiguation / important note callout */
+.notice {
+  max-width: var(--measure);
+  margin: 4px 0;
+  padding: 15px 20px;
+  background: #FFF7ED;
+  border-left: 4px solid var(--saffron);
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.notice strong { color: var(--navy); }
+.notice u { text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
 /* embedded google form */
 .form-embed {
   margin-top: 22px;
