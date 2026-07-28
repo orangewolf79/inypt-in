@@ -211,6 +211,7 @@ body {
   color: var(--saffron);
   margin: 0 0 20px;
 }
+.band h2 .brandmark { text-transform: none; }
 .band p { max-width: var(--measure); margin: 0 0 12px; }
 .band ul { max-width: var(--measure); margin: 0 0 14px; padding-left: 20px; }
 .band ul li { margin: 7px 0; }
@@ -653,8 +654,22 @@ footer p {
 }
 
 @media (max-width: 640px) {
-  .nav nav { gap: 18px; }
-  .nav nav a { font-size: 13px; }
+  /* stack the nav so the links wrap instead of overflowing off-screen */
+  .nav { position: static; }
+  .nav-inner {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  .nav nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+    width: 100%;
+  }
+  .nav nav a { font-size: 13.5px; padding: 2px 0; }
   .hero { padding: 56px 24px 48px; }
   .crest { width: 128px; }
 }
